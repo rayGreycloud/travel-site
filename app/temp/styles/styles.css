@@ -1146,6 +1146,10 @@ a {
   }
 }
 
+.site-header__menu-content--is-visible {
+  display: block !important;
+}
+
 .primary-nav--pull-right {
   float: right;
 }
