@@ -5,6 +5,11 @@ del = require('del'),
 svg2png = require('gulp-svg2png');
 
 var config = {
+  shape: {
+    spacing: {
+      padding: 1
+    }
+  },
   mode: {
     css: {
       variables: {
@@ -25,7 +30,7 @@ var config = {
 };
 
 gulp.task('beginClean', function() {
-  return del(['./app/temp/sprite/css', './app/assets/images/sprites']);
+  return del(['./app/temp/sprite', './app/assets/images/sprites']);
 });
 
 gulp.task('createSprite', ['beginClean'], function() {
@@ -52,7 +57,7 @@ gulp.task('copySpriteCSS', ['createSprite'], function() {
 });
 
 gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
-  return del(['./app/temp/sprite/css']);
+  return del('./app/temp/sprite');
 });
 
 gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
