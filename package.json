@@ -4,10 +4,11 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch"
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "dependencies": {
-    "jquery": "^2.2.4",
+    "jquery": "^3.3.1",
     "jquery-smooth-scroll": "^2.0.0",
     "lazysizes": "^2.0.0",
     "normalize.css": "^4.1.1",
